@@ -2,15 +2,21 @@ name: Test
 on: push
 
 jobs:
-    test:
-        runs-on: ubuntu-latest
-        steps:
-            - name: Hello Test
-              run: echo "Hello"
-            - name: clone repo
-              uses: actions/checkout@v2
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hello Test
+        run: echo "Hello"
+      - name: clone repo
+        uses: actions/checkout@v2
 
-            - name: Goodbye Test
-              run: echo "Goodbye"
-            - name: clone repo again
-              run: cat README.md
+      - name: run scipt
+        run: |
+          chmod +x ./new.sh
+          ./new.sh
+
+      - name: Goodbye Test
+        run: echo "Goodbye"
+
+      - name: clone repo again
+        run: cat README.md
