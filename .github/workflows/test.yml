@@ -29,6 +29,7 @@ jobs:
       - name: clone repo again
         run: cat README.md
   new_job:
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - name: Hello from new job
