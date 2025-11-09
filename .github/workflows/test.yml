@@ -9,5 +9,8 @@ jobs:
               run: echo "Hello"
             - name: clone repo
               uses: actions/checkout@v2
+
             - name: Goodbye Test
               run: echo "Goodbye"
+            - name: clone repo again
+              run: cat README.md
