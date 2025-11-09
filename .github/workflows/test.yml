@@ -36,7 +36,7 @@ jobs:
         run: echo "Hello from new job"
 
       - name: Goodbye from new job
-        uses: download/artifact@v4
+        uses: download/downlaod-artifact@v4
         with:
           name: my-artifact
 
