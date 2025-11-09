@@ -5,5 +5,5 @@ jobs:
     test:
         runs-on: ubuntu-latest
         steps:
-            - name: Set up Python
+            - name: Hello Test
               run: echo "Hello"
