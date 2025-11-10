@@ -9,7 +9,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout repository
-        uses: docker info
+        run: docker info
 
       - name: Set up Docker Buildx
-        uses: docker run ${{ matrix.images }}
+        run: docker run ${{ matrix.images }}
