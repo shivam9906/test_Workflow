@@ -2,9 +2,10 @@ name: Docker Build and Push
 on: push
 jobs:
   build_and_push:
-    matrix:
-      os: [ubuntu-latest, windows-latest]
-      images: [hello-world, alphine]
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        images: [hello-world, alphine]
     runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout repository
