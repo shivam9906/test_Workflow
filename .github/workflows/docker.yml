@@ -13,3 +13,15 @@ jobs:
 
       - name: Set up Docker Buildx
         run: docker run -d ${{ matrix.images }}
+
+  show-context:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show GitHub Context
+        run: |
+          echo "Event: ${{ github.event_name }}"
+          echo "Branch: ${{ github.ref }}"
+          echo "Actor: ${{ github.actor }}"
+          echo "Repository: ${{ github.repository }}"
+          echo "OS: ${{ runner.os }}"
+          echo "Matrix OS: ${{ matrix.os }}"
