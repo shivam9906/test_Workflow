@@ -4,7 +4,7 @@ jobs:
   build_and_push:
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-latest]
+        os: [ubuntu-latest]
         images: [hello-world, nginx]
     runs-on: ${{ matrix.os }}
     steps:
