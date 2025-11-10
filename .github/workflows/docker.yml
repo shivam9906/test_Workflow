@@ -21,7 +21,7 @@ jobs:
         run: |
           echo "Event: ${{ github.event_name }}"
           echo "Branch: ${{ github.ref }}"
-          echo "Actor: ${{ github.actor }}"
+          echo "Actor: ${{ github.actor }}
           echo "Repository: ${{ github.repository }}"
           echo "OS: ${{ runner.os }}"
           echo "Matrix OS: ${{ matrix.os }}"
