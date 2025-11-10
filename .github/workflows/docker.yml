@@ -15,7 +15,7 @@ jobs:
         run: docker run -d ${{ matrix.images }}
 
   show-context:
-    runs-on: ubuntu-latest
+    runs-on: { { matrix.os } }
     steps:
       - name: Show GitHub Context
         run: |
